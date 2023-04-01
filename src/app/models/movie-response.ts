@@ -1,6 +1,6 @@
 import { minDate } from "src/environments/environment.prod";
 import { IMovie } from "../interfaces/imovie";
-export class MovieRequest implements IMovie{
+export class MovieResponse implements IMovie{
   id: number = 0;
   genres: string[] = [];
   rating: number = 0;

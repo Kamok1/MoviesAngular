@@ -3,7 +3,7 @@
     <h2 [ngClass]="'title'">{{Movie.title}}</h2>
     <p [ngClass]="'title'">{{Movie.year}}</p>
     <div [ngClass]="'ratingBox'">
-      <img src = "../../../assets/star.svg" style="width: 2rem;" (click)="addMovieToFavorite()">>
+      <img src = "{{StarSrc}}" style="width: 2rem;" (click)="editFavoriteMovie()">>
       <p [ngClass]="'rating'">{{Movie.rating}}</p>
       <p [ngClass]="'numberOfRatings'">Number of reviews: {{NumberOfReviews}}</p>
     </div>

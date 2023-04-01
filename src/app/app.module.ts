@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { MovieHeaderComponent } from './components/movie-details/movie-header/movie-header.component';
+import { MovieDetailsMainComponent } from './components/movie-details/movie-details-main/movie-details-main.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     FooterComponent,
     MoviesComponent,
     MovieItemComponent,
-    MovieDetailsComponent,
+    MovieHeaderComponent,
+    MovieDetailsMainComponent,
   ],
   imports: [
     BrowserModule,
