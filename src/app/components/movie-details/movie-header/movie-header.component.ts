@@ -16,6 +16,7 @@ export class MovieHeaderComponent implements OnInit {
 
   movieDiffer: KeyValueDiffer<string,any> | undefined
   numberOfReviews : number = 0
+  posterSrc : string = ""
   isFavorite : boolean = false;
   starSrc: string = unfilledStarSrc
   isLogged : boolean = false
@@ -30,6 +31,7 @@ export class MovieHeaderComponent implements OnInit {
       this.movieDiffer = this._differs.find(this.movie).create()
     }
     if(this.movie.id !== 0){
+      this.posterSrc = `url(${this.movie.poster})`
       this._api.CountMovieReviews(this.movie.id).subscribe(numberOfReviews => this.numberOfReviews = numberOfReviews)
       if(this.isLogged){
         this._api.isInUserFavoritesMovies(this.movie.id).subscribe(res => {

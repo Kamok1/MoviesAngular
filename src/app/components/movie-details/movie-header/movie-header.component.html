@@ -1,11 +1,11 @@
-<div [ngClass]="['sizeCover','dupa']" [ngStyle]="{'background': 'linear-gradient(to bottom, rgba(255,0,0,0), rgba(0, 0, 0, 0.70) 90%), url(' + movie.poster + ')'}">
-  <div [ngClass]="'movieInfo'">
-    <h2 [ngClass]="'title'">{{movie.title}}</h2>
-    <p [ngClass]="'title'">{{movie.year}}</p>
-    <div [ngClass]="'ratingBox'">
-      <img src = "{{starSrc}}" style="width: 2rem;" (click)="isLogged && editFavoriteMovie() ">>
-      <p [ngClass]="'rating'">{{movie.rating}}</p>
-      <p [ngClass]="'numberOfRatings'">Number of reviews: {{numberOfReviews}}</p>
+<div class = "sizeCover" [style.background-image] ='posterSrc'>
+  <div class ="movieInfo">
+    <h2 class ="title">{{movie.title}}</h2>
+    <p class ="title">{{movie.year}}</p>
+    <div class ="ratingBox">
+      <img src = "{{starSrc}}" (click)="isLogged && editFavoriteMovie() ">
+      <p class = "rating">{{movie.rating}}</p>
+      <p class = "numberOfRatings">Number of reviews: {{numberOfReviews}}</p>
     </div>
   </div>
 </div>
