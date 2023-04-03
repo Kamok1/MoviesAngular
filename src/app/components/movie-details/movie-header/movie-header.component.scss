@@ -1,16 +1,10 @@
-.sizeCover{
-  width: 100%;
+@import '../../../../styles.scss';
+.background-photo{
+  @extend .background-photo;
   height: 40vh;
-  resize: both;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column-reverse;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.sizeCover .movieInfo{
+.background-photo .movieInfo{
   padding: 1vh 3vh
 }
 .title{

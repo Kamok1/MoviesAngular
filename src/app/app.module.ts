@@ -10,6 +10,9 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { MovieHeaderComponent } from './components/movie-details/movie-header/movie-header.component';
 import { MovieDetailsMainComponent } from './components/movie-details/movie-details-main/movie-details-main.component';
+import { MainContainerComponent } from './components/auth/main-container/main-container.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,15 @@ import { MovieDetailsMainComponent } from './components/movie-details/movie-deta
     MovieItemComponent,
     MovieHeaderComponent,
     MovieDetailsMainComponent,
-  ],
+    MainContainerComponent,
+    LoginComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

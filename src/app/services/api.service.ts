@@ -20,6 +20,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  logUserIn(): void{
+
+  }
+
   isInUserFavoritesMovies(movieId : number): Observable<boolean>{
     return this.http.get<boolean>(AppSettings.API_URL + `/User/me/movies/check/${movieId}`)
   }

@@ -1,12 +1,12 @@
-<div class = "sizeCover" [style.background-image] ='posterSrc'>
-  <div class ="movieInfo">
+<section class = "background-photo" [style.background-image] ='posterSrc' [style.background-height]="40">
+  <section class ="movieInfo">
     <h2 class ="title">{{movie.title}}</h2>
     <p class ="title">{{movie.year}}</p>
-    <div class ="ratingBox">
+    <section class ="ratingBox">
       <img src = "{{starSrc}}" (click)="isLogged && editFavoriteMovie() ">
       <p class = "rating">{{movie.rating}}</p>
       <p class = "numberOfRatings">Number of reviews: {{numberOfReviews}}</p>
-    </div>
-  </div>
-</div>
+    </section>
+  </section>
+</section>
 

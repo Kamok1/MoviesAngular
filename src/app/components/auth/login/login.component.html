@@ -1,0 +1,23 @@
+<section class="card text-center  py-5 px-4 col-12 d-flex column justify-content-around h-50-vh">
+  <section>
+    <h3 class="fw-bold">Zaloguj się z kontem MovieLibrary</h3>
+    <form [formGroup]="loginForm">
+      <section class="mb-3">
+        <label for="login" class="form-label">Nazwa użytkownika lub email</label>
+        <input required type="email" formControlName="login" class="form-control" id="login" placeholder="name@example.com">
+        <p class="fs-6 fw-lighter" >Nie pamiętam hasła</p>
+      </section>
+      <section class="mb-3">
+        <label for="password" class="form-label">Hasło</label>
+        <input required type="password" formControlName="password" class="form-control" id="password" placeholder="******">
+         <p class="fs-6 fw-lighter highlight-on-hover clickable" style="text-align: right;" (click)="changePassword()">Nie pamiętam hasła</p> <!--//todo better -->
+      </section>
+    </form>
+    </section>
+    <section class="login-buttons column justify-content-around">
+      <button class="col-12 p-2" style="background-color: green;" [disabled]="!loginForm.valid" (click)="logUserIn()">Zaloguj się</button> <!--//todo better styling-->
+      <p class="lead m-0">lub</p>
+      <button class="col-12">Załóż nowe konto</button>
+  </section>
+</section>
+

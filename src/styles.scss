@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+.center-children{
+}
+.center-children div section{
+  display: flex;
+  justify-content: center;
+}
+.background-photo{
+  width: 100%;
+  resize: both;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.highlight-on-hover:hover{
+  color: #e7a90f;
+}
+.clickable{
+  cursor: pointer;
+}

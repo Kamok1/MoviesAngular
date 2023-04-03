@@ -9,7 +9,7 @@ let isViewUpdated : boolean = false;
 @Component({
   selector: 'app-movie-header',
   templateUrl: './movie-header.component.html',
-  styleUrls: ['./movie-header.component.css']
+  styleUrls: ['./movie-header.component.scss']
 })
 export class MovieHeaderComponent implements OnInit {
   @Input() movie : Movie = new Movie()
@@ -31,6 +31,8 @@ export class MovieHeaderComponent implements OnInit {
       this.movieDiffer = this._differs.find(this.movie).create()
     }
     if(this.movie.id !== 0){
+      console.log("UPDATE");
+
       this.posterSrc = `url(${this.movie.poster})`
       this._api.CountMovieReviews(this.movie.id).subscribe(numberOfReviews => this.numberOfReviews = numberOfReviews)
       if(this.isLogged){
