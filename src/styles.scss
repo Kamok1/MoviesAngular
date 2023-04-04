@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-.center-children{
-}
+$main_color: #e7a90f;
+
 .center-children div section{
   display: flex;
   justify-content: center;
@@ -20,4 +20,13 @@
 }
 .clickable{
   cursor: pointer;
+}
+.vh-min-10{
+  min-height: 10vh;
+}
+.vh-min-50{
+  min-height: 50vh;
+}
+.text-alert{
+  color: rgb(255, 62, 62);
 }
