@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,23 +10,37 @@ import { ApiService } from 'src/app/services/api.service';
 
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup = new FormGroup({
-    login: new FormControl('', [Validators.required, Validators.minLength(5)]),
-    password: new FormControl('', Validators.required)
-  });
+    loginError: boolean = false;
+    loginForm: FormGroup = new FormGroup({
+      login: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      password: new FormControl('', Validators.required)
+    }
+  );
 
   constructor(
-    private _api: ApiService
+    private _auth: AuthService,
+    private _router: Router
     ) { }
 
 
   ngOnInit(): void {
   }
   changePassword(): void{
+    //todo
+  }
+
+  clearError(): void{
+    if(this.loginError)
+      this.loginError = false
   }
   logUserIn():void{
-    console.log(this.loginForm.value);
-
-    this._api.logUserIn();
+    this._auth.logUserIn(this.loginForm.get("login")?.value,this.loginForm.get("password")?.value).subscribe(res => {
+      this.loginError = !res
+      if(res)
+        this._router.navigate([""])
+      else(
+        this.loginForm.reset()
+      )
+    })
   }
 }

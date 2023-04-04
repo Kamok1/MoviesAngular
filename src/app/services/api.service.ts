@@ -3,13 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular
 import { Observable, catchError, map, of, throwError } from 'rxjs';
 import {AppSettings} from "../../settings/appsettings";
 import { MovieResponse } from '../models/movie-response';
-
-  const httpOptions = {
-  headers : new HttpHeaders({
-    'Content-Type' : "Appliaction-json"
-  })
-};
-
+import { Jwt } from '../models/jwt';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +14,14 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  logUserIn(): void{
-
+  logUserIn(login : string, password : string): Observable<Jwt | null>{
+    return this.http.post<Jwt>(AppSettings.API_URL + `/Auth/login`,
+    {
+      "login": login,
+      "password": password
+    }).pipe(
+      catchError( err => {return of(null)})
+    )
   }
 
   isInUserFavoritesMovies(movieId : number): Observable<boolean>{
