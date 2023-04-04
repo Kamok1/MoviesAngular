@@ -1,5 +1,5 @@
 import { minDate } from "src/environments/environment.prod";
-import { IMovie } from "../interfaces/imovie";
+import { IMovie } from "../abstractions/imovie";
 export class MovieResponse implements IMovie{
   id: number = 0;
   genres: string[] = [];
