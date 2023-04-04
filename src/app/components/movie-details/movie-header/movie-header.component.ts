@@ -14,7 +14,7 @@ let isViewUpdated : boolean = false;
 export class MovieHeaderComponent implements OnInit {
   @Input() movie : Movie = new Movie()
 
-  movieDiffer: KeyValueDiffer<string,any> | undefined
+  oldMoviePoster: string = ""
   numberOfReviews : number = 0
   posterSrc : string = ""
   isFavorite : boolean = false;
@@ -28,11 +28,9 @@ export class MovieHeaderComponent implements OnInit {
 
   ngOnInit(): void {
     if(isViewUpdated == false){
-      this.movieDiffer = this._differs.find(this.movie).create()
+      this.oldMoviePoster = this.movie.poster;
     }
     if(this.movie.id !== 0){
-      console.log("UPDATE");
-
       this.posterSrc = `url(${this.movie.poster})`
       this._api.CountMovieReviews(this.movie.id).subscribe(numberOfReviews => this.numberOfReviews = numberOfReviews)
       if(this.isLogged){
@@ -56,7 +54,7 @@ export class MovieHeaderComponent implements OnInit {
     this.updateStar()
   }
   ngDoCheck(): void {
-    if(this.movieDiffer?.diff(this.movie) && !isViewUpdated){
+    if(this.oldMoviePoster !== this.movie.poster && this.movie.id !== 0 &&!isViewUpdated){
       isViewUpdated = true;
       setTimeout(()=>{
         this.ngOnInit()
