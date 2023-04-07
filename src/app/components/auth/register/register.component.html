@@ -1,0 +1,26 @@
+<section class="card text-center  py-5 px-4 col-12 d-flex column justify-content-around vh-min-50">
+  <section>
+    <h3 class="fw-bold px-5 mx-5 my-3">Create account</h3>
+    <form [formGroup]="registerForm">
+      <section class="mb-3">
+        <label for="login" class="form-label">Username</label>
+        <input required  formControlName="name" class="form-control" id="name" placeholder="Kamok1" (input)="clearError()">
+      </section>
+      <section class="mb-3">
+        <label for="login" class="form-label">E-mail</label>
+        <input required type="email" formControlName="email" class="form-control" id="email" placeholder="name@example.com" (input)="clearError()">
+      </section>
+      <section class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input required type="password" formControlName="password" class="form-control" id="password" placeholder="******" (input)="clearError()">
+      </section>
+    </form>
+    <section class="vh-min-10">
+      <p class="fs-6 fw-lighter text-alert block" *ngIf="registerError">{{registerErrorText}}</p>
+    </section>
+    <section class="login-buttons column justify-content-around">
+      <button class="col-12 p-2" style="background-color: #e7a90f;" [disabled]="!registerForm.valid" (click)="register()">Complete registration</button> <!--//todo better styling-->
+  </section>
+  </section>
+</section>
+

@@ -30,6 +30,15 @@ export class AuthService {
       })
     )
   }
+
+  register(login : string, password : string, email : string): Observable<string | null>{
+    return this._api.createAccount(login, password, email).pipe(
+      catchError(err => {
+        return of(err["error"]["messege"])
+      })
+    )
+  }
+
   setAuthCookies(jwt : string, expiresIn : number){
     localStorage.setItem('token', jwt)
     localStorage.setItem('expires_at', new Date(this.currentDate.getTime() + (expiresIn*1000)).getTime().toString())

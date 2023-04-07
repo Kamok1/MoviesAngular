@@ -13,6 +13,7 @@ import { MovieDetailsMainComponent } from './components/movie-details/movie-deta
 import { MainContainerComponent } from './components/auth/main-container/main-container.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MovieHeaderComponent,
     MovieDetailsMainComponent,
     MainContainerComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
     ],
   imports: [
     BrowserModule,

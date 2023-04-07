@@ -24,6 +24,15 @@ export class ApiService {
     )
   }
 
+  createAccount(login : string, password : string, email : string): Observable<string>{
+    return this.http.post<string>(AppSettings.API_URL + `/Auth/register`,
+    {
+      "name": login,
+      "password": password,
+      "email": email
+    })
+  }
+
   isInUserFavoritesMovies(movieId : number): Observable<boolean>{
     return this.http.get<boolean>(AppSettings.API_URL + `/User/me/movies/check/${movieId}`)
   }
