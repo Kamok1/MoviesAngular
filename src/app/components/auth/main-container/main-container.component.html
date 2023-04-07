@@ -2,12 +2,12 @@
   <div class="d-flex align-items-center justify-content-center h-100">
     <ng-component #container></ng-component>
     <section *ngIf="!isContainer" class="card text-center  py-5 px-4 col-3 d-flex column justify-content-around h-50-vh">
-      <h3>Zaloguj się i oceniaj filmy</h3>
+      <h3>Log in się and rate movies</h3>
       <section class="login-buttons column justify-content-around">
-        <button class="col-12" (click)="createComponent()">Zaloguj się z kontem <span>MovieLibrary</span></button>
+        <button class="col-12" (click)="changeComponent('login')">Log in with your <span>MovieLibrary</span> account</button>
         <p class="lead m-0">lub</p>
-        <button class="col-12">Załóż nowe konto</button>
-        <button class="col-6 no-border highlight-on-hover">Nie teraz</button>
+        <button class="col-12" (click)="changeComponent('register')">Craete new account</button>
+        <button class="col-6 no-border highlight-on-hover" routerLink="">Not now</button>
       </section>
     </section>
   </div>
