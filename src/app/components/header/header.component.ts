@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -8,13 +10,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() title: string = "title";
-  isLogged : boolean = false;
 
-  constructor() { }
+  constructor(
+    private _user: UserService,
+    private _auth: AuthService
+  ) { }
+
+  get isLogged(): boolean{
+    return this._user.isLogged
+  }
 
   ngOnInit(): void {
   }
-  login():void{
-    this.isLogged = !this.isLogged;
+  logout(){
+    this._auth.logout()
   }
 }

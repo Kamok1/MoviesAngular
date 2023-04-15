@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie} from 'src/app/models/movie';
 import { ApiService } from 'src/app/services/api.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-movies',
@@ -13,7 +14,10 @@ export class MoviesComponent implements OnInit {
   Movies: Movie[] = Array();
   isLoading: boolean = false;
 
-  constructor(private api: ApiService) { }
+  constructor(
+    private api: ApiService,
+    private _auth: AuthService
+    ) { }
 
   ngOnInit(): void {
     this.isLoading = true;
@@ -23,6 +27,7 @@ export class MoviesComponent implements OnInit {
           this.Movies.push(new Movie(movie))
         })
         this.isLoading = false;
-    });
+    })
+    this._auth.decodeJwt(localStorage.getItem("token")!)
   }
 }

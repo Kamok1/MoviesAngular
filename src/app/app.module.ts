@@ -14,6 +14,9 @@ import { MainContainerComponent } from './components/auth/main-container/main-co
 import { LoginComponent } from './components/auth/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { UserService } from './services/user.service';
+import { AuthService } from './services/auth.service';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,11 @@ import { RegisterComponent } from './components/auth/register/register.component
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    UserService,
+    AuthService,
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
