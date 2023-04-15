@@ -1,5 +1,5 @@
 import { AppSettings } from "src/settings/appsettings";
-import { IMovie } from "../abstractions/imovie";
+import { IMovie } from "./imovie";
 
 export class Movie implements IMovie{
   public genres!: Array<string>;
