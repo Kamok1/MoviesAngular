@@ -1,12 +1,13 @@
-<div class="row">
-  <div *ngIf="isLoading">
-    Ładowanie
+<section class="container">
+  <div class="row">
+    <div *ngIf="isLoading">
+      Loading...
+    </div>
+    <div *ngFor="let movie of Movies" class="col-6" routerLink="movie/{{movie.title}}-{{movie.id}}"  >
+      <app-movie-item [ngStyle]="" [movie] = "movie"></app-movie-item>
+    </div>
   </div>
-
-  <div *ngFor="let movie of Movies" class="my-3 col-6" routerLink="movie/{{movie.title}}-{{movie.id}}"  >
-    <app-movie-item [movie] = "movie"></app-movie-item>
-  </div>
-</div>
-<ng-template #noMovies>
-  Error
-</ng-template>
+  <ng-template #noMovies>
+    Error
+  </ng-template>
+</section>

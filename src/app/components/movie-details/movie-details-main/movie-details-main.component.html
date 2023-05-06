@@ -1,10 +1,10 @@
 <section class="container">
   <app-movie-header [movie]="Movie"></app-movie-header>
   <article>
-      <div class="row gx-5 mt-5">
+      <div class="row justify-content-between gx-5 mt-5">
         <img class="col-md-2" src="{{Movie.poster}}">
         <p class="col-md-6">{{Movie.description}}</p>
-        <section class="col-md-4">userSection</section>
+        <app-rating-section ngClass="col-md-4"></app-rating-section>
       </div>
     </article>
 </section>

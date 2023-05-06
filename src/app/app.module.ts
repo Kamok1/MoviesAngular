@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { ApiService } from './services/api.service';
+import { RatingSectionComponent } from './components/movie-details/rating-section/rating-section.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ApiService } from './services/api.service';
     MovieDetailsMainComponent,
     MainContainerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RatingSectionComponent
     ],
   imports: [
     BrowserModule,

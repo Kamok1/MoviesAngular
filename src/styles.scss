@@ -1,32 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
-$main_color: #e7a90f;
+// /* You can add global styles to this file, and also import other style files */
+// // src/styles.scss
+// html,
+// body {
+//   height: 100%;
+// }
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
+*{
+  transition-duration: 100ms;
+}
 
-.center-children div section{
-  display: flex;
+$main-color-lighter: false;
+.center{
   justify-content: center;
+  text-align: center;
 }
-.background-photo{
-  width: 100%;
-  resize: both;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column-reverse;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.center *{
+  justify-content: center;
+  text-align: center;
 }
-.highlight-on-hover:hover{
-  color: #e7a90f;
-}
-.clickable{
-  cursor: pointer;
-}
-.vh-min-10{
-  min-height: 10vh;
-}
-.vh-min-50{
-  min-height: 50vh;
-}
-.text-alert{
-  color: rgb(255, 62, 62);
-}
+// @import './variables.scss';
+
+
+// // *{
+// //   background-color: $main-color;
+// // }
+// // *{
+// //   color: $text-color;
+// // }
+// .center-children div section{
+//   display: flex;
+//   justify-content: center;
+// }
+// .background-photo{
+//   width: 100%;
+//   resize: both;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column-reverse;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+// .highlight-on-hover:hover{
+//   color: #e7a90f;
+// }
+// .clickable{
+//   cursor: pointer;
+// }
+// .vh-min-10{
+//   min-height: 10vh;
+// }
+// .vh-min-50{
+//   min-height: 50vh;
+// }
+// .text-alert{
+//   color: rgb(255, 62, 62);
+// }
