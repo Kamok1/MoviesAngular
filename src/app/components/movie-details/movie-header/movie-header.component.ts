@@ -22,9 +22,8 @@ export class MovieHeaderComponent implements OnInit {
   isLogged : boolean = false
 
   constructor(
-    private _api: ApiService,
-    private _differs: KeyValueDiffers,
-  ) {}
+    private _api: ApiService
+      ) {}
 
   ngOnInit(): void {
     if(isViewUpdated == false){

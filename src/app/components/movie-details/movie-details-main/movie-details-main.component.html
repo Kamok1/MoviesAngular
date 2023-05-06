@@ -1,10 +1,10 @@
-<app-movie-header [movie]="Movie"></app-movie-header>
 <section class="container">
+  <app-movie-header [movie]="Movie"></app-movie-header>
   <article>
-    <div class="row">
-      <img class="col-2" src="{{Movie.poster}}">
-      <p class="col-6">{{Movie.description}}</p>
-      <section class="col-4">userSection</section>
-    </div>
-  </article>
+      <div class="row gx-5 mt-5">
+        <img class="col-md-2" src="{{Movie.poster}}">
+        <p class="col-md-6">{{Movie.description}}</p>
+        <section class="col-md-4">userSection</section>
+      </div>
+    </article>
 </section>
