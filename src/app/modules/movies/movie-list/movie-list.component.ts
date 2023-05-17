@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie} from 'src/app/models/movie';
+import { Movie } from 'src/app/models/movie';
 import { ApiService } from 'src/app/services/api.service';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-movies',
-  templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
+  selector: 'app-movie-list',
+  templateUrl: './movie-list.component.html',
+  styleUrls: ['./movie-list.component.scss']
 })
-
-export class MoviesComponent implements OnInit {
+export class MovieListComponent implements OnInit {
 
   Movies: Movie[] = Array();
   isLoading: boolean = false;

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from '../../../models/movie';
-import { ApiService } from '../../../services/api.service';
-import { KeyValueDiffer, KeyValueDiffers } from '@angular/core';
+import { Movie } from 'src/app/models/movie';
+import { ApiService } from 'src/app/services/api.service';
 
 const filledStarSrc : string = "../../../assets/filledStar.svg"
 const unfilledStarSrc : string = "../../../assets/Star.svg"

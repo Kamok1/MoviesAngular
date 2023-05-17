@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
-import { ControlValueAccessor } from '@angular/forms';
 import { RegisterComponent } from '../register/register.component';
 
 

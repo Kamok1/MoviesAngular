@@ -4,7 +4,7 @@
       Loading...
     </div>
     <div *ngFor="let movie of Movies" class="col-6" routerLink="movie/{{movie.title}}-{{movie.id}}"  >
-      <app-movie-item [ngStyle]="" [movie] = "movie"></app-movie-item>
+      movie-
     </div>
   </div>
   <ng-template #noMovies>

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MoviesComponent } from './components/movies/movies.component';
-import { MovieDetailsMainComponent } from './components/movie-details/movie-details-main/movie-details-main.component';
-import { MainContainerComponent } from './components/auth/main-container/main-container.component';
+import { MovieDetailsMainComponent } from '../movies/movie-detail/movie-details-main/movie-details-main.component';
+import { MainContainerComponent } from '../auth/main-container/main-container.component';
+import { MovieListComponent } from '../movies/movie-list/movie-list.component';
 
 const routes: Routes = [
-  {path: "", component: MoviesComponent},
+  {path: "", component: MovieListComponent},
   {path: "movie/:title-id", component: MovieDetailsMainComponent},
   {path: "login", component: MainContainerComponent }
   // { path: '**', component: PageNotFoundComponent },
