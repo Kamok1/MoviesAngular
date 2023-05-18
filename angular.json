@@ -27,14 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/styles.scss",
                 {
-                  "input": "src/light.scss",
+                  "input": "src/styles/light.scss",
                   "bundleName": "light",
                   "inject": false
                 },
                 {
-                    "input": "src/dark.scss",
+                    "input": "src/styles/dark.scss",
                     "bundleName": "dark",
                     "inject": true
                 }
@@ -106,14 +106,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/styles.scss",
               {
-                "input": "src/light.scss",
+                "input": "src/styles/light.scss",
                 "bundleName": "light",
                 "inject": false
               },
               {
-                  "input": "src/dark.scss",
+                  "input": "src/styles/dark.scss",
                   "bundleName": "dark",
                   "inject": true
               }
