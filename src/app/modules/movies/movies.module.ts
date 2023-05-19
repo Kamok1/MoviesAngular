@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { MovieHeaderComponent } from './movie-detail/movie-header/movie-header.component';
 import { RatingSectionComponent } from './movie-detail/rating-section/rating-section.component';
 import { MovieDetailsMainComponent } from './movie-detail/movie-details-main/movie-details-main.component';
+import { ActorListComponent } from './movie-detail/actor-list/actor-list.component';
 
 
 
@@ -18,7 +19,8 @@ import { MovieDetailsMainComponent } from './movie-detail/movie-details-main/mov
     MovieListComponent,
     MovieDetailComponent,
     MovieCardComponent,
-    RatingSectionComponent
+    RatingSectionComponent,
+    ActorListComponent
   ],
   imports: [
     AppRoutingModule,
