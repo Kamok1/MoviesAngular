@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { ApiService } from 'src/app/services/api.service';
 
-const filledStarSrc : string = "../../../assets/filledStar.svg"
-const unfilledStarSrc : string = "../../../assets/Star.svg"
+const filledStarSrc : string = "assets/filledStar.svg"
+const unfilledStarSrc : string = "assets/Star.svg"
 let isViewUpdated : boolean = false;
 @Component({
   selector: 'app-movie-header',
