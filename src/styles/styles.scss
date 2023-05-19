@@ -1,13 +1,4 @@
-// /* You can add global styles to this file, and also import other style files */
-// // src/styles.scss
-// html,
-// body {
-//   height: 100%;
-// }
-// body {
-//   margin: 0;
-//   font-family: Roboto, "Helvetica Neue", sans-serif;
-// }
+@import "variables";
 *{
   transition-duration: 100ms;
 }
@@ -21,41 +12,21 @@ $main-color-lighter: false;
   justify-content: center;
   text-align: center;
 }
-// @import './variables.scss';
+.secondary-text{
+  color: $secondary-text;
+}
+.my-card{
+  padding: 3%;
+  border-radius: 3%;
+  background-color: $secondary-background;
+  color: $secondary-text;
+}
 
-
-// // *{
-// //   background-color: $main-color;
-// // }
-// // *{
-// //   color: $text-color;
-// // }
-// .center-children div section{
-//   display: flex;
-//   justify-content: center;
-// }
-// .background-photo{
-//   width: 100%;
-//   resize: both;
-//   overflow: hidden;
-//   display: flex;
-//   flex-direction: column-reverse;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-// .highlight-on-hover:hover{
-//   color: #e7a90f;
-// }
-// .clickable{
-//   cursor: pointer;
-// }
-// .vh-min-10{
-//   min-height: 10vh;
-// }
-// .vh-min-50{
-//   min-height: 50vh;
-// }
-// .text-alert{
-//   color: rgb(255, 62, 62);
-// }
+.my-card img{
+  padding: 0%;
+  border-radius: 3%;
+  margin-bottom: 2%;
+}
+.bg-secondary{
+  background-color: $secondary-background;
+}

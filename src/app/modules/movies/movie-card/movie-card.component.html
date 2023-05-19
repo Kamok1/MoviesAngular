@@ -1,9 +1,14 @@
-<div class="d-flex flex-column center-children mx-5"  onclick="">
-  <div>{{movie.year}}</div>
-  <div>{{movie.title}}</div>
-  <div>{{movie.description}}</div>
-  <div>{{movie.director}}</div>
-  <div>{{movie.genres}}</div>
-  <div>{{movie.id}}</div>
-  <img style="height: 300px;" src="{{movie.poster}}" alt="">
-</div>
+<section class="d-flex flex-column center-children mx-5 my-card">
+  <div class="img" [ngStyle]="{'background-image': 'url('+movie.poster+')'}"></div>
+  <section class="p-2">
+    <h5>{{movie.title}}</h5>
+    <section class="secondary-text">
+      <p>{{movie.description}}</p>
+      <div class="row center">
+        <p class="col-4">{{movie.director}}</p>
+        <p class="col-4">{{movie.genres}}</p>
+        <p class="col-4">{{movie.year}}</p>
+      </div>
+    </section>
+  </section>
+</section>

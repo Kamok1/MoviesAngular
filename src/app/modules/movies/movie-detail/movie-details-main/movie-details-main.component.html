@@ -1,10 +1,15 @@
 <section class="container">
   <app-movie-header [movie]="Movie"></app-movie-header>
-  <article>
-      <div class="row justify-content-between gx-5 mt-5">
-        <img class="col-md-2" src="{{Movie.poster}}">
-        <p class="col-md-6">{{Movie.description}}</p>
-        <app-rating-section ngClass="col-md-4"></app-rating-section>
-      </div>
+  <article class="mt-3">
+      <section class="row justify-content-between gx-5">
+        <img class=" mt-4 mt-md-0 mt-4-sm col-sm-12 col-md-2" src="{{Movie.poster}}">
+        <section class="mt-4 mt-md-0 mt-4-sm col-sm-12 col-md-6">
+          <p>{{Movie.description}}</p>
+          <p>Where can i watch?
+            TODO
+          </p>
+        </section>
+        <app-rating-section ngClass="mt-4 mt-md-0 col-sm-12 col-md-4"></app-rating-section>
+      </section>
     </article>
 </section>

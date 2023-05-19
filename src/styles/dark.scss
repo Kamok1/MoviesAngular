@@ -1,4 +1,6 @@
 $body-bg:       #0b0b0b;
+$secondary-background: #1b1b1b!important;
+$secondary-text: #d6d6d6;
 $body-color:    #d6d6d6;
-$main-color-lighter: red;
-@import '~bootstrap/scss/bootstrap';
+@import 'styles';
+@import 'bootstrap/scss/bootstrap';

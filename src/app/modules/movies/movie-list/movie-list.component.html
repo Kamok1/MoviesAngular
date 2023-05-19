@@ -3,8 +3,8 @@
     <div *ngIf="isLoading">
       Loading...
     </div>
-    <div *ngFor="let movie of Movies" class="col-6" routerLink="movie/{{movie.title}}-{{movie.id}}"  >
-      movie-
+    <div *ngFor="let movie of Movies" class="col-12 col-md-6 col-lg-4" routerLink="movie/{{movie.title}}-{{movie.id}}"  >
+      <app-movie-card [movie]="movie"></app-movie-card>
     </div>
   </div>
   <ng-template #noMovies>

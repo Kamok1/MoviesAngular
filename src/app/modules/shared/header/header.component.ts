@@ -3,6 +3,9 @@ import { AuthService } from 'src/app/services/auth.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { UserService } from 'src/app/services/user.service';
 
+const blackLogoSrc : string = "assets/blackLogo.png"
+const whiteLogoSrc : string = "assets/whiteLogo.png"
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,6 +15,8 @@ export class HeaderComponent implements OnInit {
 
   @Input() title: string = "title";
   isDarkTheme: boolean = true;
+  whiteLogoSrc: string = whiteLogoSrc;
+  blackLogoSrc: string = blackLogoSrc;
   constructor(
     private _user: UserService,
     private _auth: AuthService,

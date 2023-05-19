@@ -1,6 +1,8 @@
 <nav class="navbar fixed-top navbar-expand-lg" [ngClass]="isDarkTheme ? 'navbar-dark bg-dark' : 'navbar-light bg-light'">
   <div class="container">
-    <a class="navbar-brand" href="#">{{title}}</a>
+    <a class="navbar-brand" href="#">
+      <img  [src]="isDarkTheme ? whiteLogoSrc : blackLogoSrc" alt="logo" alt="logo" height="40">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,19 +10,16 @@
       <div class="me-auto ">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Filmy</a>
+            <a class="nav-link active" aria-current="page" href="#">Movies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Seriale</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Aktorzy</a>
+            <a class="nav-link" href="#" tabindex="-1">Actors</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" tabindex="-1">Ranking</a>
           </li>
           <li class="nav-item" *ngIf="isLogged">
-            <a class="nav-link" aria-current="page" href="#">Moje filmy</a>
+            <a class="nav-link" aria-current="page" href="#">My movies</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="switchTheme()">Theme</a>
@@ -32,10 +31,10 @@
       <div *ngIf="isLogged; else loggedOut">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Konto</a>
+            <a class="nav-link" href="#">Account</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)="logout()">Wyloguj</a>
+            <a class="nav-link" href="#" (click)="logout()">Logout</a>
           </li>
         </ul>
       </div>
@@ -44,7 +43,7 @@
         <div>
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="login">Zaloguj się</a>
+              <a class="nav-link active" aria-current="page" routerLink="login">Login</a>
             </li>
           </ul>
         </div>
