@@ -37,8 +37,9 @@ export class RegisterComponent implements OnInit {
 
       this._auth.logUserIn(this.registerForm.get("email")!.value, this.registerForm.get("password")!.value).subscribe(res => {
         console.log(res)
-        if(res)
+        if(res){
           this._router.navigate([""])
+        }
         else
           this.registerErrorText = "Error, please try again!"
         })

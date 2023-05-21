@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Movie } from 'src/app/models/movie';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -12,7 +13,7 @@ let isViewUpdated : boolean = false;
 })
 export class MovieHeaderComponent implements OnInit {
   @Input() movie : Movie = new Movie()
-
+  urlSafe?: SafeResourceUrl = undefined;
   oldMoviePoster: string = ""
   numberOfReviews : number = 0
   posterSrc : string = ""
@@ -21,10 +22,12 @@ export class MovieHeaderComponent implements OnInit {
   isLogged : boolean = false
 
   constructor(
-    private _api: ApiService
+    private _api: ApiService,
+    private _sanitizer: DomSanitizer
       ) {}
 
   ngOnInit(): void {
+    this.urlSafe = this._sanitizer.bypassSecurityTrustResourceUrl(this.movie.trailerUrl);
     if(isViewUpdated == false){
       this.oldMoviePoster = this.movie.poster;
     }

@@ -10,6 +10,7 @@ export class Movie implements IMovie{
   public releaseDate!: Date;
   public id! : number;
   public posterPath! :string;
+  public trailerUrl!: string;
 
   public get poster(): string{
     return `${AppSettings.SERVER_URL}/${this.posterPath}`.replace(/\\/g,"/");
@@ -27,5 +28,6 @@ export class Movie implements IMovie{
     this.releaseDate = movie?.releaseDate ?? new Date;
     this.id = movie?.id ?? 0;
     this.posterPath = movie?.posterPath ?? "";
+    this.trailerUrl = movie?.trailerUrl ?? "";
   }
 }

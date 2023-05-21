@@ -19,7 +19,7 @@ export class MovieDetailsMainComponent implements OnInit {
 
     ngOnInit(): void {
       let id = Number.parseInt(this.route.snapshot.paramMap.get('title-id')?.split("-")[1]!)
-      this.api.GetMovie(id).subscribe(movie => this.Movie = new Movie(movie))
+      this.api.GetMovie(id).subscribe(movie => {this.Movie = new Movie(movie); console.log(this.Movie)})
       this.api.CountMovieReviews(id).subscribe(numberOfReviews => this.NumberOfReviews = numberOfReviews)
     }
   }

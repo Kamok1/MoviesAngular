@@ -9,4 +9,5 @@ export class MovieResponse implements IMovie{
   director: string = "empty";
   releaseDate: Date = minDate;
   posterPath: string = "empty";
+  trailerUrl: string = "empty";
 }

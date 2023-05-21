@@ -6,5 +6,6 @@ export interface IMovie{
   director: string;
   releaseDate: Date;
   posterPath :string;
+  trailerUrl : string;
   id : number;
 }
